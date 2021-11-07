@@ -68,7 +68,7 @@ void playWestminsterChimes() {
  */
 void playBong(int bongDurationMs) {
   tone(buzzerPin, NOTE_B0, bongDurationMs);
-  delay(bongDuration);
+  delay(bongDurationMs);
   noTone(buzzerPin);
 }
 
