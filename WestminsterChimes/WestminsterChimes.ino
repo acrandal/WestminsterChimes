@@ -1,26 +1,28 @@
 /**
- *   Westminster Chimes Demo
+ *  Westminster Chimes Demo
  *   
- *   Plays a simple Westminster Chimes melody
+ *  Plays a simple Westminster Chimes melody
  *    Provides a method for chimes and gongs
  *   
- *   circuit:
- *     - 8 ohm speaker (piezio) on digital pin 8
+ *  circuit:
+ *    - 8 ohm speaker (piezio) on digital pin 8
  *     
- *     created 21 Jan 2010
- *     modified 30 Aug 2011
- *     modified 06 Nov 2021 - Aaron S. Crandall <crandall@gonzaga.edu>
+ *  created 21 Jan 2010
+ *    modified 30 Aug 2011
+ *    modified 06 Nov 2021 - Aaron S. Crandall <crandall@gonzaga.edu>
  *     
- *     Original code from: http://www.arduino.cc/en/Tutorial/Tone
- *      by Tom Igoe
- *      This example code is in the public domain.
+ *  Original code from: http://www.arduino.cc/en/Tutorial/Tone
+ *    by Tom Igoe
+ *    This example code is in the public domain.
  * 
- *  Good example of the Westminster Chimes sheet music:
- *   https://levysheetmusic.mse.jhu.edu/collection/169/090
+ *  Good example of the original Westminster Chimes sheet music:
+ *    https://levysheetmusic.mse.jhu.edu/collection/169/090
  */
 
-
+// Header with note frequencies defined
 #include "pitches.h"
+
+// Pin pezieo is attached to
 int buzzerPin = 8;
 
 // Westminster Chimes music:
@@ -64,8 +66,8 @@ void playWestminsterChimes() {
  * 
  * @param bongDuration: length of bong in ms
  */
-void playBong(int bongDuration) {
-  tone(buzzerPin, NOTE_B0, bongDuration);
+void playBong(int bongDurationMs) {
+  tone(buzzerPin, NOTE_B0, bongDurationMs);
   delay(bongDuration);
   noTone(buzzerPin);
 }
@@ -81,5 +83,5 @@ void setup() {
 }
 
 void loop() {
-  // No further sounds
+  // No further sound
 }
